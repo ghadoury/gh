@@ -42,10 +42,25 @@
                 <input type="radio" name="q1" value="A"> A) 2<br>
                 <input type="radio" name="q1" value="B"> B) 4<br>
                 <input type="radio" name="q1" value="C"> C) 3<br>
+                <input type="radio" name="q1" value="D"> D) Autre<br>
             </div>
         </div>
 
-        <!-- Repeat similar structure for each question -->
+        <!-- Repeat for all 14 questions with appropriate names (q2, q3, ..., q14) and options -->
+        <!-- Here is an example for question 2 -->
+
+        <div class="question">
+            <h2>Question 2</h2>
+            <p>Le module de z = 3 + 4i est:</p>
+            <div class="answers">
+                <input type="radio" name="q2" value="A"> A) 5<br>
+                <input type="radio" name="q2" value="B"> B) 7<br>
+                <input type="radio" name="q2" value="C"> C) 6<br>
+                <input type="radio" name="q2" value="D"> D) 4<br>
+            </div>
+        </div>
+
+        <!-- Continue similarly until Question 14 -->
         
         <button type="button" onclick="calculateResults()">Soumettre</button>
     </form>
@@ -61,7 +76,8 @@
             // Add your correct answers here
             const correctAnswers = {
                 q1: "B",
-                // Add remaining questions and their correct answers
+                q2: "A",
+                // Continue with correct answers for q3 to q14
             };
 
             const form = document.forms.quizForm;
