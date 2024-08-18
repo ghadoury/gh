@@ -96,6 +96,7 @@
         <h1>Quiz sur les Nombres Complexes</h1>
 
         <form id="quizForm">
+            <!-- Questions 1-11 -->
             <div class="question">
                 <p>1. La partie réelle du nombre complexe \( z = (2 + i)^2 \) est :</p>
                 <div class="options">
@@ -172,26 +173,118 @@
                 <p>9. Étant donné deux points \( A \) et \( B \) dans le plan complexe avec les affixes \( z_A = 1 + i \) et \( z_B = 3 - i \), l'affixe du milieu \( I \) de \( [AB] \) est :</p>
                 <div class="options">
                     <label><input type="radio" name="q9" value="A"> A) \( AB = 2 \)</label>
-                    <label><input type="radio" name="q9" value="B"> B) \( 2 \)</label>
-                    <label><input type="radio" name="q9" value="C"> C) \( \frac{z_A + z_B}{2} \)</label>
+                    <label><input type="radio" name="q9" value="B"> B) \( z_I = 2 \)</label>
+                    <label><input type="radio" name="q9" value="C"> C) \( z_I = 2 + i \)</label>
                 </div>
             </div>
 
             <div class="question">
-                <p>10. L'ensemble des points \( M \) dont l'affixe \( z \) satisfait \( |z - (1 + i)| = |z - 2i| \) est :</p>
+                <p>10. Si \( z = a + bi \) est un nombre complexe, alors \( |z|^2 \) est égal à :</p>
                 <div class="options">
-                    <label><input type="radio" name="q10" value="A"> A) Un cercle</label>
-                    <label><input type="radio" name="q10" value="B"> B) Une droite</label>
-                    <label><input type="radio" name="q10" value="C"> C) Une ellipse</label>
+                    <label><input type="radio" name="q10" value="A"> A) \( a^2 + b^2 \)</label>
+                    <label><input type="radio" name="q10" value="B"> B) \( a^2 - b^2 \)</label>
+                    <label><input type="radio" name="q10" value="C"> C) \( 2ab \)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>11. On sait que \(\frac{z_C - z_A}{z_B - z_A} = 3i\). On peut en déduire que :</p>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="A"> A) A, B et C sont alignés</label>
+                    <label><input type="radio" name="q11" value="B"> B) ABC est équilatéral</label>
+                    <label><input type="radio" name="q11" value="C"> C) ABC est rectangle en A</label>
+                    <label><input type="radio" name="q11" value="D"> D) ABC est rectangle en B</label>
+                </div>
+            </div>
+
+            <!-- Additional Questions 12-20 -->
+            <div class="question">
+                <p>12. La somme des modules des nombres complexes \( 3 + 4i \) et \( -1 + 2i \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q12" value="A"> A) 7</label>
+                    <label><input type="radio" name="q12" value="B"> B) 5</label>
+                    <label><input type="radio" name="q12" value="C"> C) 6</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>13. Si \( z = 1 - i \) et \( w = 2 + 2i \), alors \( zw \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q13" value="A"> A) \( 4 - 2i \)</label>
+                    <label><input type="radio" name="q13" value="B"> B) \( 4 + 2i \)</label>
+                    <label><input type="radio" name="q13" value="C"> C) \( 2 - 2i \)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>14. La division des nombres complexes \( \frac{4 + i}{1 - i} \) donne :</p>
+                <div class="options">
+                    <label><input type="radio" name="q14" value="A"> A) \( 1 + 2i \)</label>
+                    <label><input type="radio" name="q14" value="B"> B) \( 2 - i \)</label>
+                    <label><input type="radio" name="q14" value="C"> C) \( 1 - i \)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>15. La forme trigonométrique de \( z = -1 + \sqrt{3}i \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q15" value="A"> A) \( 2(\cos \frac{2\pi}{3} + i\sin \frac{2\pi}{3}) \)</label>
+                    <label><input type="radio" name="q15" value="B"> B) \( 2(\cos \frac{\pi}{3} + i\sin \frac{\pi}{3}) \)</label>
+                    <label><input type="radio" name="q15" value="C"> C) \( 2(\cos \frac{\pi}{2} + i\sin \frac{\pi}{2}) \)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>16. La racine quatrième de \( 16 \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q16" value="A"> A) \( 2 \)</label>
+                    <label><input type="radio" name="q16" value="B"> B) \( -2 \)</label>
+                    <label><input type="radio" name="q16" value="C"> C) \( 4 \)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>17. La différence entre les nombres complexes \( 1 + 2i \) et \( 2 - 3i \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q17" value="A"> A) \( -1 + 5i \)</label>
+                    <label><input type="radio" name="q17" value="B"> B) \( -1 - i \)</label>
+                    <label><input type="radio" name="q17" value="C"> C) \( -1 + i \)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>18. Le produit des nombres complexes \( i \times \bar{i} \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q18" value="A"> A) \( 1 \)</label>
+                    <label><input type="radio" name="q18" value="B"> B) \( -1 \)</label>
+                    <label><input type="radio" name="q18" value="C"> C) \( 0 \)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>19. La somme des arguments de \( z = 1 + i \) et \( w = -1 + i \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q19" value="A"> A) \( \frac{\pi}{2} \)</label>
+                    <label><input type="radio" name="q19" value="B"> B) \( \pi \)</label>
+                    <label><input type="radio" name="q19" value="C"> C) \( \frac{3\pi}{4} \)</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>20. Si \( z = \cos \theta + i \sin \theta \), alors \( z^2 \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q20" value="A"> A) \( \cos 2\theta + i \sin 2\theta \)</label>
+                    <label><input type="radio" name="q20" value="B"> B) \( \cos 2\theta - i \sin 2\theta \)</label>
+                    <label><input type="radio" name="q20" value="C"> C) \( 2 \cos \theta + i \sin \theta \)</label>
                 </div>
             </div>
 
             <button type="button" onclick="checkAnswers()">Soumettre</button>
         </form>
 
-        <div id="result" class="answers">
-            <h2>Résultats</h2>
-            <p id="resultText"></p>
+        <div class="answers" id="answers">
+            <h2>Résultats :</h2>
+            <p id="result"></p>
         </div>
     </div>
 
@@ -207,22 +300,30 @@
                 q7: 'C',
                 q8: 'B',
                 q9: 'C',
-                q10: 'B'
+                q10: 'A',
+                q11: 'A',
+                q12: 'B',
+                q13: 'A',
+                q14: 'A',
+                q15: 'A',
+                q16: 'A',
+                q17: 'A',
+                q18: 'A',
+                q19: 'C',
+                q20: 'A'
             };
 
             let score = 0;
-            let totalQuestions = Object.keys(answers).length;
-
+            let totalQuestions = 20;
             for (let i = 1; i <= totalQuestions; i++) {
-                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                const selectedOption = document.querySelector(`input[name=q${i}]:checked`);
                 if (selectedOption && selectedOption.value === answers[`q${i}`]) {
                     score++;
                 }
             }
 
-            const resultText = `Vous avez obtenu ${score} sur ${totalQuestions} bonnes réponses.`;
-            document.getElementById('resultText').innerText = resultText;
-            document.getElementById('result').style.display = 'block';
+            document.getElementById('result').innerText = `Vous avez obtenu ${score} sur ${totalQuestions} bonnes réponses.`;
+            document.getElementById('answers').style.display = 'block';
         }
     </script>
 </body>
