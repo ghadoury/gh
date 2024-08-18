@@ -3,328 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz sur les Nombres Complexes</title>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Complex Numbers Quiz</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f0f2f5;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #007BFF;
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
         .question {
             margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
         }
         .question p {
-            margin: 0;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        .options {
-            margin-top: 10px;
-        }
-        .options label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1rem;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .options input[type="radio"] {
-            margin-right: 10px;
-        }
-        .options label:hover {
-            background-color: #007BFF;
-            color: #ffffff;
-        }
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            font-size: 1.1rem;
-            color: #ffffff;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .answers {
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
-        }
-        .answers h2 {
-            color: #007BFF;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        .answers p {
             margin: 5px 0;
-            font-size: 1rem;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        b {
+            color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Quiz sur les Nombres Complexes</h1>
+    <h1>Complex Numbers Quiz</h1>
 
-        <form id="quizForm">
-            <!-- Questions 1-11 -->
-            <div class="question">
-                <p>1. La partie réelle du nombre complexe \( z = (2 + i)^2 \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="A"> A) 2</label>
-                    <label><input type="radio" name="q1" value="B"> B) 4</label>
-                    <label><input type="radio" name="q1" value="C"> C) 3</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>2. La partie imaginaire du nombre complexe \( z = (1 - i)^2 \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="A"> A) -2i</label>
-                    <label><input type="radio" name="q2" value="B"> B) 0</label>
-                    <label><input type="radio" name="q2" value="C"> C) -2</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>3. Le module du nombre complexe \( z = 4 + 3i \) est égal à :</p>
-                <div class="options">
-                    <label><input type="radio" name="q3" value="A"> A) 7</label>
-                    <label><input type="radio" name="q3" value="B"> B) 7</label>
-                    <label><input type="radio" name="q3" value="C"> C) 5</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>4. Un argument du nombre complexe \( z = 2 - 2i \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="A"> A) \( \frac{\pi}{2} \)</label>
-                    <label><input type="radio" name="q4" value="B"> B) \( -\frac{\pi}{4} \)</label>
-                    <label><input type="radio" name="q4" value="C"> C) \( \frac{3\pi}{4} \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>5. Si \( z = 2 - 5i \), alors :</p>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="A"> A) \( z = 2 + 5i \)</label>
-                    <label><input type="radio" name="q5" value="B"> B) \( z = -2 + 5i \)</label>
-                    <label><input type="radio" name="q5" value="C"> C) \( z = -2 - 5i \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>6. Soit \( z \) un nombre complexe avec un module de 2 et un argument \( \frac{\pi}{3} \), alors :</p>
-                <div class="options">
-                    <label><input type="radio" name="q6" value="A"> A) \( z = 3 + i \)</label>
-                    <label><input type="radio" name="q6" value="B"> B) \( z = 1 + i\sqrt{3} \)</label>
-                    <label><input type="radio" name="q6" value="C"> C) \( z = 2 + i\sqrt{3} \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>7. La forme exponentielle de \( z = -2 - 2i \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q7" value="A"> A) \( z = 2\sqrt{2} e^{i\frac{\pi}{4}} \)</label>
-                    <label><input type="radio" name="q7" value="B"> B) \( z = 2\sqrt{2} e^{-i\frac{\pi}{4}} \)</label>
-                    <label><input type="radio" name="q7" value="C"> C) \( z = 2\sqrt{2} e^{-i\frac{3\pi}{4}} \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>8. La forme exponentielle de \( \cos \frac{\pi}{8} + i\sin \frac{\pi}{8} \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q8" value="A"> A) \( z = e^{-i\frac{3\pi}{40}} \)</label>
-                    <label><input type="radio" name="q8" value="B"> B) \( z = e^{i\frac{37\pi}{40}} \)</label>
-                    <label><input type="radio" name="q8" value="C"> C) \( z = e^{i(\frac{\pi}{8} + \frac{\pi}{5})} \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>9. Étant donné deux points \( A \) et \( B \) dans le plan complexe avec les affixes \( z_A = 1 + i \) et \( z_B = 3 - i \), l'affixe du milieu \( I \) de \( [AB] \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q9" value="A"> A) \( AB = 2 \)</label>
-                    <label><input type="radio" name="q9" value="B"> B) \( z_I = 2 \)</label>
-                    <label><input type="radio" name="q9" value="C"> C) \( z_I = 2 + i \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>10. Si \( z = a + bi \) est un nombre complexe, alors \( |z|^2 \) est égal à :</p>
-                <div class="options">
-                    <label><input type="radio" name="q10" value="A"> A) \( a^2 + b^2 \)</label>
-                    <label><input type="radio" name="q10" value="B"> B) \( a^2 - b^2 \)</label>
-                    <label><input type="radio" name="q10" value="C"> C) \( 2ab \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>11. On sait que \(\frac{z_C - z_A}{z_B - z_A} = 3i\). On peut en déduire que :</p>
-                <div class="options">
-                    <label><input type="radio" name="q11" value="A"> A) A, B et C sont alignés</label>
-                    <label><input type="radio" name="q11" value="B"> B) ABC est équilatéral</label>
-                    <label><input type="radio" name="q11" value="C"> C) ABC est rectangle en A</label>
-                    <label><input type="radio" name="q11" value="D"> D) ABC est rectangle en B</label>
-                </div>
-            </div>
-
-            <!-- Additional Questions 12-20 -->
-            <div class="question">
-                <p>12. La somme des modules des nombres complexes \( 3 + 4i \) et \( -1 + 2i \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q12" value="A"> A) 7</label>
-                    <label><input type="radio" name="q12" value="B"> B) 5</label>
-                    <label><input type="radio" name="q12" value="C"> C) 6</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>13. Si \( z = 1 - i \) et \( w = 2 + 2i \), alors \( zw \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q13" value="A"> A) \( 4 - 2i \)</label>
-                    <label><input type="radio" name="q13" value="B"> B) \( 4 + 2i \)</label>
-                    <label><input type="radio" name="q13" value="C"> C) \( 2 - 2i \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>14. La division des nombres complexes \( \frac{4 + i}{1 - i} \) donne :</p>
-                <div class="options">
-                    <label><input type="radio" name="q14" value="A"> A) \( 1 + 2i \)</label>
-                    <label><input type="radio" name="q14" value="B"> B) \( 2 - i \)</label>
-                    <label><input type="radio" name="q14" value="C"> C) \( 1 - i \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>15. La forme trigonométrique de \( z = -1 + \sqrt{3}i \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q15" value="A"> A) \( 2(\cos \frac{2\pi}{3} + i\sin \frac{2\pi}{3}) \)</label>
-                    <label><input type="radio" name="q15" value="B"> B) \( 2(\cos \frac{\pi}{3} + i\sin \frac{\pi}{3}) \)</label>
-                    <label><input type="radio" name="q15" value="C"> C) \( 2(\cos \frac{\pi}{2} + i\sin \frac{\pi}{2}) \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>16. La racine quatrième de \( 16 \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q16" value="A"> A) \( 2 \)</label>
-                    <label><input type="radio" name="q16" value="B"> B) \( -2 \)</label>
-                    <label><input type="radio" name="q16" value="C"> C) \( 4 \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>17. La différence entre les nombres complexes \( 1 + 2i \) et \( 2 - 3i \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q17" value="A"> A) \( -1 + 5i \)</label>
-                    <label><input type="radio" name="q17" value="B"> B) \( -1 - i \)</label>
-                    <label><input type="radio" name="q17" value="C"> C) \( -1 + i \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>18. Le produit des nombres complexes \( i \times \bar{i} \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q18" value="A"> A) \( 1 \)</label>
-                    <label><input type="radio" name="q18" value="B"> B) \( -1 \)</label>
-                    <label><input type="radio" name="q18" value="C"> C) \( 0 \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>19. La somme des arguments de \( z = 1 + i \) et \( w = -1 + i \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q19" value="A"> A) \( \frac{\pi}{2} \)</label>
-                    <label><input type="radio" name="q19" value="B"> B) \( \pi \)</label>
-                    <label><input type="radio" name="q19" value="C"> C) \( \frac{3\pi}{4} \)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <p>20. Si \( z = \cos \theta + i \sin \theta \), alors \( z^2 \) est :</p>
-                <div class="options">
-                    <label><input type="radio" name="q20" value="A"> A) \( \cos 2\theta + i \sin 2\theta \)</label>
-                    <label><input type="radio" name="q20" value="B"> B) \( \cos 2\theta - i \sin 2\theta \)</label>
-                    <label><input type="radio" name="q20" value="C"> C) \( 2 \cos \theta + i \sin \theta \)</label>
-                </div>
-            </div>
-
-            <button type="button" onclick="checkAnswers()">Soumettre</button>
-        </form>
-
-        <div class="answers" id="answers">
-            <h2>Résultats :</h2>
-            <p id="result"></p>
-        </div>
+    <!-- Q1 -->
+    <div class="question">
+        <p><b>Q1:</b> La partie réelle du nombre complexe z = (2 + i)<sup>2</sup> est :</p>
+        <ul>
+            <li>A) 2</li>
+            <li>B) 4</li>
+            <li>C) 3</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) 3</p>
     </div>
 
-    <script>
-        function checkAnswers() {
-            const answers = {
-                q1: 'B',
-                q2: 'A',
-                q3: 'C',
-                q4: 'B',
-                q5: 'C',
-                q6: 'B',
-                q7: 'C',
-                q8: 'B',
-                q9: 'C',
-                q10: 'A',
-                q11: 'A',
-                q12: 'B',
-                q13: 'A',
-                q14: 'A',
-                q15: 'A',
-                q16: 'A',
-                q17: 'A',
-                q18: 'A',
-                q19: 'C',
-                q20: 'A'
-            };
+    <!-- Q2 -->
+    <div class="question">
+        <p><b>Q2:</b> La partie imaginaire du nombre complexe z = (1 - i)<sup>2</sup> est :</p>
+        <ul>
+            <li>A) -2i</li>
+            <li>B) 0</li>
+            <li>C) -2</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) -2</p>
+    </div>
 
-            let score = 0;
-            let totalQuestions = 20;
-            for (let i = 1; i <= totalQuestions; i++) {
-                const selectedOption = document.querySelector(`input[name=q${i}]:checked`);
-                if (selectedOption && selectedOption.value === answers[`q${i}`]) {
-                    score++;
-                }
-            }
+    <!-- Q3 -->
+    <div class="question">
+        <p><b>Q3:</b> Le module du nombre complexe z = 4 + 3i est égal à :</p>
+        <ul>
+            <li>A) 7</li>
+            <li>B) 7</li>
+            <li>C) 5</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) 5</p>
+    </div>
 
-            document.getElementById('result').innerText = `Vous avez obtenu ${score} sur ${totalQuestions} bonnes réponses.`;
-            document.getElementById('answers').style.display = 'block';
-        }
-    </script>
+    <!-- Q4 -->
+    <div class="question">
+        <p><b>Q4:</b> Un argument du nombre complexe z = 2 - 2i est égal à :</p>
+        <ul>
+            <li>A) 2π/4</li>
+            <li>B) -4π/4</li>
+            <li>C) 3π/4</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) 3π/4</p>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <p><b>Q5:</b> Si z = 2 - 5i, alors :</p>
+        <ul>
+            <li>A) z = 2 + 5i</li>
+            <li>B) z = -2 + 5i</li>
+            <li>C) z = -2 - 5i</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) z = -2 - 5i</p>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+        <p><b>Q6:</b> Le conjugué de z = 1 + 2i est :</p>
+        <ul>
+            <li>A) 1 + 2i</li>
+            <li>B) 1 - 2i</li>
+            <li>C) -1 - 2i</li>
+        </ul>
+        <p><b>Correct Answer:</b> B) 1 - 2i</p>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+        <p><b>Q7:</b> La partie réelle de z = -1 - i est :</p>
+        <ul>
+            <li>A) -1</li>
+            <li>B) -i</li>
+            <li>C) 1</li>
+        </ul>
+        <p><b>Correct Answer:</b> A) -1</p>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+        <p><b>Q8:</b> La partie imaginaire de z = 2 + 3i est :</p>
+        <ul>
+            <li>A) 2</li>
+            <li>B) 3</li>
+            <li>C) i</li>
+        </ul>
+        <p><b>Correct Answer:</b> B) 3</p>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question">
+        <p><b>Q9:</b> Le produit de z = (1 + i) par z = (1 - i) est :</p>
+        <ul>
+            <li>A) 1</li>
+            <li>B) -1</li>
+            <li>C) 2</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) 2</p>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question">
+        <p><b>Q10:</b> Le module de z = 3 + 4i est :</p>
+        <ul>
+            <li>A) 5</li>
+            <li>B) 6</li>
+            <li>C) 7</li>
+        </ul>
+        <p><b>Correct Answer:</b> A) 5</p>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question">
+        <p><b>Q11:</b> La partie imaginaire du produit de z = (2 + i) par z = (1 - i) est :</p>
+        <ul>
+            <li>A) 4</li>
+            <li>B) -1</li>
+            <li>C) 3</li>
+        </ul>
+        <p><b>Correct Answer:</b> B) -1</p>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question">
+        <p><b>Q12:</b> Si z = 4 + 3i, alors :</p>
+        <ul>
+            <li>A) |z| = 4</li>
+            <li>B) |z| = 3</li>
+            <li>C) |z| = 5</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) |z| = 5</p>
+    </div>
+
+    <!-- Q13 -->
+    <div class="question">
+        <p><b>Q13:</b> L'inverse de z = 1 + i est :</p>
+        <ul>
+            <li>A) 1 - i</li>
+            <li>B) -1 - i</li>
+            <li>C) (1/2) - (i/2)</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) (1/2) - (i/2)</p>
+    </div>
+
+    <!-- Q14 -->
+    <div class="question">
+        <p><b>Q14:</b> Le carré de z = 1 + i est :</p>
+        <ul>
+            <li>A) 2i</li>
+            <li>B) -2i</li>
+            <li>C) -2</li>
+        </ul>
+        <p><b>Correct Answer:</b> C) -2</p>
+    </div>
+
 </body>
 </html>
