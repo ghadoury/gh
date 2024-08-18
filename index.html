@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz sur les Nombres Complexes</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -71,139 +72,158 @@
         button:hover {
             background-color: #0056b3;
         }
+        .answers {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .answers h2 {
+            color: #007BFF;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .answers p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Quiz sur les Nombres Complexes</h1>
 
-        <div class="question">
-            <p>1. La partie réelle du nombre complexe \( z = (2 + i)^2 \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q1" value="A"> A) 2</label>
-                <label><input type="radio" name="q1" value="B"> B) 4</label>
-                <label><input type="radio" name="q1" value="C"> C) 3</label>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. La partie réelle du nombre complexe \( z = (2 + i)^2 \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) 2</label>
+                    <label><input type="radio" name="q1" value="B"> B) 4</label>
+                    <label><input type="radio" name="q1" value="C"> C) 3</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>2. La partie imaginaire du nombre complexe \( z = (1 - i)^2 \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q2" value="A"> A) -2i</label>
-                <label><input type="radio" name="q2" value="B"> B) 0</label>
-                <label><input type="radio" name="q2" value="C"> C) -2</label>
+            <div class="question">
+                <p>2. La partie imaginaire du nombre complexe \( z = (1 - i)^2 \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) -2i</label>
+                    <label><input type="radio" name="q2" value="B"> B) 0</label>
+                    <label><input type="radio" name="q2" value="C"> C) -2</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>3. Le module du nombre complexe \( z = 4 + 3i \) est égal à :</p>
-            <div class="options">
-                <label><input type="radio" name="q3" value="A"> A) 7</label>
-                <label><input type="radio" name="q3" value="B"> B) 7</label>
-                <label><input type="radio" name="q3" value="C"> C) 5</label>
+            <div class="question">
+                <p>3. Le module du nombre complexe \( z = 4 + 3i \) est égal à :</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) 7</label>
+                    <label><input type="radio" name="q3" value="B"> B) 7</label>
+                    <label><input type="radio" name="q3" value="C"> C) 5</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>4. Un argument du nombre complexe \( z = 2 - 2i \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q4" value="A"> A) \( \frac{\pi}{2} \)</label>
-                <label><input type="radio" name="q4" value="B"> B) \( -\frac{\pi}{4} \)</label>
-                <label><input type="radio" name="q4" value="C"> C) \( \frac{3\pi}{4} \)</label>
+            <div class="question">
+                <p>4. Un argument du nombre complexe \( z = 2 - 2i \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) \( \frac{\pi}{2} \)</label>
+                    <label><input type="radio" name="q4" value="B"> B) \( -\frac{\pi}{4} \)</label>
+                    <label><input type="radio" name="q4" value="C"> C) \( \frac{3\pi}{4} \)</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>5. Si \( z = 2 - 5i \), alors :</p>
-            <div class="options">
-                <label><input type="radio" name="q5" value="A"> A) \( z = 2 + 5i \)</label>
-                <label><input type="radio" name="q5" value="B"> B) \( z = -2 + 5i \)</label>
-                <label><input type="radio" name="q5" value="C"> C) \( z = -2 - 5i \)</label>
+            <div class="question">
+                <p>5. Si \( z = 2 - 5i \), alors :</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) \( z = 2 + 5i \)</label>
+                    <label><input type="radio" name="q5" value="B"> B) \( z = -2 + 5i \)</label>
+                    <label><input type="radio" name="q5" value="C"> C) \( z = -2 - 5i \)</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>6. Soit \( z \) un nombre complexe avec un module de 2 et un argument \( \frac{\pi}{3} \), alors :</p>
-            <div class="options">
-                <label><input type="radio" name="q6" value="A"> A) \( z = 3 + i \)</label>
-                <label><input type="radio" name="q6" value="B"> B) \( z = 1 + i\sqrt{3} \)</label>
-                <label><input type="radio" name="q6" value="C"> C) \( z = 2 + i\sqrt{3} \)</label>
+            <div class="question">
+                <p>6. Soit \( z \) un nombre complexe avec un module de 2 et un argument \( \frac{\pi}{3} \), alors :</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) \( z = 3 + i \)</label>
+                    <label><input type="radio" name="q6" value="B"> B) \( z = 1 + i\sqrt{3} \)</label>
+                    <label><input type="radio" name="q6" value="C"> C) \( z = 2 + i\sqrt{3} \)</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>7. La forme exponentielle de \( z = -2 - 2i \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q7" value="A"> A) \( z = 2\sqrt{2} e^{i\frac{\pi}{4}} \)</label>
-                <label><input type="radio" name="q7" value="B"> B) \( z = 2\sqrt{2} e^{-i\frac{\pi}{4}} \)</label>
-                <label><input type="radio" name="q7" value="C"> C) \( z = 2\sqrt{2} e^{-i\frac{3\pi}{4}} \)</label>
+            <div class="question">
+                <p>7. La forme exponentielle de \( z = -2 - 2i \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) \( z = 2\sqrt{2} e^{i\frac{\pi}{4}} \)</label>
+                    <label><input type="radio" name="q7" value="B"> B) \( z = 2\sqrt{2} e^{-i\frac{\pi}{4}} \)</label>
+                    <label><input type="radio" name="q7" value="C"> C) \( z = 2\sqrt{2} e^{-i\frac{3\pi}{4}} \)</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>8. La forme exponentielle de \( \cos \frac{\pi}{8} + i\sin \frac{\pi}{8} \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q8" value="A"> A) \( z = e^{-i\frac{3\pi}{40}} \)</label>
-                <label><input type="radio" name="q8" value="B"> B) \( z = e^{i\frac{37\pi}{40}} \)</label>
-                <label><input type="radio" name="q8" value="C"> C) \( z = e^{i(\frac{\pi}{8} + \frac{\pi}{5})} \)</label>
+            <div class="question">
+                <p>8. La forme exponentielle de \( \cos \frac{\pi}{8} + i\sin \frac{\pi}{8} \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) \( z = e^{-i\frac{3\pi}{40}} \)</label>
+                    <label><input type="radio" name="q8" value="B"> B) \( z = e^{i\frac{37\pi}{40}} \)</label>
+                    <label><input type="radio" name="q8" value="C"> C) \( z = e^{i(\frac{\pi}{8} + \frac{\pi}{5})} \)</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>9. Étant donné deux points \( A \) et \( B \) dans le plan complexe avec les affixes \( z_A = 1 + i \) et \( z_B = 3 - i \), l'affixe du milieu \( I \) de \( [AB] \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q9" value="A"> A) \( AB = 2 \)</label>
-                <label><input type="radio" name="q9" value="B"> B) \( z_I = 2 \)</label>
-                <label><input type="radio" name="q9" value="C"> C) \( z_I = \frac{z_A + z_B}{2} \)</label>
+            <div class="question">
+                <p>9. Étant donné deux points \( A \) et \( B \) dans le plan complexe avec les affixes \( z_A = 1 + i \) et \( z_B = 3 - i \), l'affixe du milieu \( I \) de \( [AB] \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) \( AB = 2 \)</label>
+                    <label><input type="radio" name="q9" value="B"> B) \( 2 \)</label>
+                    <label><input type="radio" name="q9" value="C"> C) \( \frac{z_A + z_B}{2} \)</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>10. Étant donné quatre points distincts \( A, B, C, D \) dans le plan complexe, une mesure de l'angle \( \angle(AB, CD) \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q10" value="A"> A) \( \text{arg}\left(\frac{z_D - z_C}{z_B - z_A}\right) \)</label>
-                <label><input type="radio" name="q10" value="B"> B) \( \text{arg}(z_B - z_A) - \text{arg}(z_D - z_C) \)</label>
-                <label><input type="radio" name="q10" value="C"> C) \( \text{arg}\left(\frac{z_B - z_A}{z_D - z_C}\right) \)</label>
+            <div class="question">
+                <p>10. L'ensemble des points \( M \) dont l'affixe \( z \) satisfait \( |z - (1 + i)| = |z - 2i| \) est :</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) Un cercle</label>
+                    <label><input type="radio" name="q10" value="B"> B) Une droite</label>
+                    <label><input type="radio" name="q10" value="C"> C) Une ellipse</label>
+                </div>
             </div>
-        </div>
 
-        <div class="question">
-            <p>11. Étant donné trois points distincts \( A, B, C \) dans le plan complexe, si \( \frac{z_C - z_A}{z_B - z_A} = 3i \), alors :</p>
-            <div class="options">
-                <label><input type="radio" name="q11" value="A"> A) \( A, B, C \) sont colinéaires</label>
-                <label><input type="radio" name="q11" value="B"> B) \( ABC \) est un triangle rectangle en \( A \)</label>
-                <label><input type="radio" name="q11" value="C"> C) \( A, B, C \) appartiennent au cercle de diamètre \( [AB] \)</label>
-            </div>
-        </div>
+            <button type="button" onclick="checkAnswers()">Soumettre</button>
+        </form>
 
-        <div class="question">
-            <p>12. Dans le plan complexe, étant donné les points \( A \) et \( B \) avec les affixes \( z_A = 1 + i \) et \( z_B = 2i \), l'ensemble des points \( M \) dont l'affixe \( z \) satisfait \( |z - (1 + i)| = 2 \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q12" value="A"> A) Le cercle avec le diamètre \( [AB] \)</label>
-                <label><input type="radio" name="q12" value="B"> B) Le cercle avec le diamètre \( AB \)</label>
-                <label><input type="radio" name="q12" value="C"> C) La médiatrice du segment \( [AB] \)</label>
-            </div>
+        <div id="result" class="answers">
+            <h2>Résultats</h2>
+            <p id="resultText"></p>
         </div>
-
-        <div class="question">
-            <p>13. Étant donné trois points distincts \( A, B, C \) dans le plan complexe, si \( z_C = z_A + z_B \), alors :</p>
-            <div class="options">
-                <label><input type="radio" name="q13" value="A"> A) \( OACB \) est un parallélogramme</label>
-                <label><input type="radio" name="q13" value="B"> B) \( A, B, C \) sont colinéaires</label>
-                <label><input type="radio" name="q13" value="C"> C) \( A \) est le milieu de \( [BC] \)</label>
-            </div>
-        </div>
-
-        <div class="question">
-            <p>14. Dans le plan complexe, étant donné les points \( A \) et \( B \) avec les affixes \( z_A = 1 + i \) et \( z_B = 2i \), l'ensemble des points \( M \) dont l'affixe \( z \) satisfait \( |z - (1 + i)| = |z - 2i| \) est :</p>
-            <div class="options">
-                <label><input type="radio" name="q14" value="A"> A) Le cercle avec le diamètre \( [AB] \)</label>
-                <label><input type="radio" name="q14" value="B"> B) Le cercle avec le diamètre \( AB \)</label>
-                <label><input type="radio" name="q14" value="C"> C) La médiatrice du segment \( [AB] \)</label>
-            </div>
-        </div>
-
-        <button type="submit">Soumettre</button>
     </div>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: 'B',
+                q2: 'A',
+                q3: 'C',
+                q4: 'B',
+                q5: 'C',
+                q6: 'B',
+                q7: 'C',
+                q8: 'B',
+                q9: 'C',
+                q10: 'B'
+            };
+
+            let score = 0;
+            let totalQuestions = Object.keys(answers).length;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            const resultText = `Vous avez obtenu ${score} sur ${totalQuestions} bonnes réponses.`;
+            document.getElementById('resultText').innerText = resultText;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
